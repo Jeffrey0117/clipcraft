@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { Home } from 'lucide-react'
 import { tools, groups } from '../tools/registry'
+import GitHubStar from './GitHubStar'
 
 export default function Sidebar() {
   return (
@@ -35,6 +36,8 @@ export default function Sidebar() {
             ))}
         </div>
       ))}
+
+      <GitHubStar className="gh-star side-ghstar" />
     </aside>
   )
 }

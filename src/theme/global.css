@@ -81,9 +81,24 @@ body.home-dark { background: #07060a; }
 }
 .nav-cta:hover { transform: translateY(-1px); background: #d61f19; }
 
-@media (max-width: 380px) {
+.nav-right { display: flex; align-items: center; gap: 12px; }
+
+/* GitHub Star 按鈕(深底 / 影片上都用白字半透明) */
+.gh-star {
+  display: inline-flex; align-items: center; gap: 7px;
+  color: #fff; font-family: var(--sans); font-weight: 700; font-size: 14px;
+  padding: 9px 13px; border-radius: 10px;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .2);
+  transition: background-color .15s ease;
+}
+.gh-star:hover { background: rgba(255, 255, 255, .2); }
+.gh-star .star-count { font-variant-numeric: tabular-nums; padding-left: 8px; border-left: 1px solid rgba(255, 255, 255, .28); }
+.side-ghstar { margin-top: auto; justify-content: center; }
+
+@media (max-width: 480px) {
   .topnav-inner { padding: 0 16px; }
-  .nav-cta { padding: 9px 15px; font-size: 13.5px; }
+  .nav-cta { padding: 9px 14px; font-size: 13.5px; }
+  .gh-star .gh-label { display: none; }
 }
 
 /* ── 工作台(工具頁)左側側邊欄:深色,與首頁一致 ─────────── */

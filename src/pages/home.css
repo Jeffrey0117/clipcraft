@@ -122,5 +122,6 @@
 .feature h4 { margin: 0; font-size: 14.5px; font-weight: 800; color: #F2EFEA; }
 .feature p { margin: 0; font-size: 12.5px; color: #A39B93; line-height: 1.65; }
 
-.home-foot { margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.1); color: #6E665F; font-size: 12.5px; line-height: 1.9; }
+.home-foot { margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.1); color: #6E665F; font-size: 12.5px; line-height: 1.9; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.home-foot .foot-text { margin: 0; }
 .home-foot b { color: #F2EFEA; font-weight: 800; letter-spacing: .02em; }

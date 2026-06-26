@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { tools } from '../tools/registry'
+import GitHubStar from '../components/GitHubStar'
 import './home.css'
 
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v))
@@ -114,8 +115,11 @@ export default function Home() {
       {/* ── 頁尾 ── */}
       <section className="home-body">
         <div className="home-foot">
-          <b>FreeForCut</b> · 為每一位做剪輯的人打造。<br />
-          免費線上工具,打開瀏覽器就能用。
+          <GitHubStar className="gh-star foot-ghstar" />
+          <p className="foot-text">
+            <b>FreeForCut</b> · 為每一位做剪輯的人打造。<br />
+            覺得好用的話,歡迎到 GitHub 給顆星。
+          </p>
         </div>
       </section>
     </div>

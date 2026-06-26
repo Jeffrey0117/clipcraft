@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { tools } from '../tools/registry'
+import GitHubStar from './GitHubStar'
 
 export default function TopNav() {
   const [scrolled, setScrolled] = useState(false)
@@ -22,9 +23,12 @@ export default function TopNav() {
           <span className="wordmark">FreeForCut</span>
         </NavLink>
 
-        <button className="nav-cta" onClick={() => navigate(tools[0].path)}>
-          開始做字卡 <ArrowRight size={17} strokeWidth={2.4} />
-        </button>
+        <div className="nav-right">
+          <GitHubStar />
+          <button className="nav-cta" onClick={() => navigate(tools[0].path)}>
+            開始做字卡 <ArrowRight size={17} strokeWidth={2.4} />
+          </button>
+        </div>
       </div>
     </header>
   )
