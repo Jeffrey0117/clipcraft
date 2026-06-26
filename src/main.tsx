@@ -7,8 +7,10 @@ import './theme/global.css'
 
 // 註:刻意不使用 StrictMode —— 工具元件內部是指令式 canvas/錄影邏輯,
 // StrictMode 的 effect 雙重觸發會重複綁定事件。單一路由一次只掛一個工具,安全。
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename={basename}>
     <App />
   </BrowserRouter>,
 )

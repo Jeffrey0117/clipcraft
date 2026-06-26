@@ -8,6 +8,7 @@ const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v))
 
 export default function Home() {
   const navigate = useNavigate()
+  const base = import.meta.env.BASE_URL // 本機是 '/',Pages 上是 '/clipcraft/'
   const rootRef = useRef<HTMLDivElement>(null)
   const sceneRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -83,11 +84,11 @@ export default function Home() {
       {/* ── 捲動舞台:影片釘住,捲動時溶進同一個深色底,標題浮現 ── */}
       <section className="scene" ref={sceneRef}>
         <div className="scene-pin">
-          <video className="scene-video" ref={videoRef} src="/hometop.webm" autoPlay loop muted playsInline preload="auto" aria-hidden="true" />
+          <video className="scene-video" ref={videoRef} src={`${base}hometop.webm`} autoPlay loop muted playsInline preload="auto" aria-hidden="true" />
           <div className="scene-veil" ref={veilRef} />
           <div className="scene-headline" ref={copyRef}>
-            <video ref={reelARef} className="reel" src="/headline.webm" poster="/headline.png" autoPlay muted playsInline preload="auto" aria-hidden="true" />
-            <video ref={reelBRef} className="reel reel-b" src="/demo.webm" muted playsInline preload="auto" aria-hidden="true" />
+            <video ref={reelARef} className="reel" src={`${base}headline.webm`} poster={`${base}headline.png`} autoPlay muted playsInline preload="auto" aria-hidden="true" />
+            <video ref={reelBRef} className="reel reel-b" src={`${base}demo.webm`} muted playsInline preload="auto" aria-hidden="true" />
           </div>
           <div className="scroll-ind" ref={cueRef} aria-hidden="true"><span /></div>
         </div>
