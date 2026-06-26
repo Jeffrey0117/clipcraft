@@ -1,0 +1,55 @@
+.tool-kinetic { --accent: #C01814; width: 100%; display: flex; justify-content: center; }
+.tool-kinetic .wrap { width: 100%; max-width: 1060px; display: flex; flex-direction: column; gap: 16px; align-items: center; }
+.tool-kinetic .panel { width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.tool-kinetic h2 { font-size: 14px; margin: 0 0 10px; color: var(--ink); font-weight: 800; letter-spacing: .03em; }
+.tool-kinetic .selbar { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--muted); margin-bottom: 10px; flex-wrap: wrap; }
+.tool-kinetic .mergebtn { border: 1px solid var(--accent); background: #fff; color: var(--accent); border-radius: 8px; padding: 7px 13px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: var(--sans); }
+.tool-kinetic .mergebtn:hover { background: var(--accent); color: #fff; }
+.tool-kinetic .cards { display: flex; flex-direction: column; gap: 10px; max-height: 470px; overflow: auto; padding-right: 4px; }
+.tool-kinetic .card { display: grid; grid-template-columns: 34px 1fr 84px 84px 128px auto; gap: 10px; align-items: start; border: 1px solid var(--line); border-radius: 11px; padding: 10px; background: #FCFBFA; }
+.tool-kinetic .card.sel { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(192,24,20,.12); }
+.tool-kinetic .idxcol { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.tool-kinetic .idxcol input { width: 16px; height: 16px; accent-color: var(--accent); }
+.tool-kinetic .idx { width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+.tool-kinetic .tcell { display: flex; flex-direction: column; gap: 6px; }
+.tool-kinetic .card textarea { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 9px 11px; font-size: 15px; font-family: var(--sans); font-weight: 700; resize: vertical; min-height: 42px; line-height: 1.4; outline: none; }
+.tool-kinetic .card textarea:focus { border-color: var(--accent); }
+.tool-kinetic .cardopts { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.tool-kinetic .chk { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); cursor: pointer; }
+.tool-kinetic .nf { font-size: 12px; color: var(--ink); display: flex; align-items: center; gap: 5px; font-weight: 700; }
+.tool-kinetic .nf input { width: 60px; border: 1px solid var(--line); border-radius: 7px; padding: 5px 7px; font-size: 13px; font-family: var(--sans); }
+.tool-kinetic .redbtn { border: 1px solid var(--accent); background: #fff; color: var(--accent); border-radius: 7px; padding: 6px 11px; font-size: 12.5px; font-weight: 700; cursor: pointer; font-family: var(--sans); }
+.tool-kinetic .redbtn:hover { background: var(--accent); color: #fff; }
+.tool-kinetic .mini { display: flex; flex-direction: column; gap: 4px; }
+.tool-kinetic .mini label { font-size: 11px; color: var(--muted); }
+.tool-kinetic .mini input { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 8px; font-size: 14px; font-family: var(--sans); }
+.tool-kinetic .tc { font-size: 11.5px; color: var(--muted); line-height: 1.5; padding-top: 3px; }
+.tool-kinetic .tc b { color: var(--accent); font-variant-numeric: tabular-nums; }
+.tool-kinetic .ops { display: flex; flex-direction: column; gap: 4px; }
+.tool-kinetic .ops button { border: 1px solid var(--line); background: #fff; border-radius: 7px; width: 30px; height: 26px; cursor: pointer; font-size: 13px; color: var(--muted); }
+.tool-kinetic .ops button:hover { border-color: var(--accent); color: var(--accent); }
+.tool-kinetic .underrow { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.tool-kinetic .addbtn { flex: 1; min-width: 140px; border: 1px dashed var(--line); background: #FCFBFA; color: var(--muted); border-radius: 9px; padding: 10px; font-size: 14px; cursor: pointer; font-family: var(--sans); }
+.tool-kinetic .addbtn:hover { border-color: var(--accent); color: var(--accent); }
+.tool-kinetic .srtbtn { border: 1px solid var(--accent); background: #fff; color: var(--accent); border-radius: 9px; padding: 10px 16px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--sans); }
+.tool-kinetic .srtbtn:hover { background: var(--accent); color: #fff; }
+.tool-kinetic .pastebox { margin-top: 10px; }
+.tool-kinetic .pastebox textarea { width: 100%; min-height: 140px; border: 1px solid var(--line); border-radius: 10px; padding: 11px 13px; font-size: 13px; font-family: ui-monospace, Menlo, Consolas, monospace; line-height: 1.5; resize: vertical; outline: none; }
+.tool-kinetic .pastebox textarea:focus { border-color: var(--accent); }
+.tool-kinetic .row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+.tool-kinetic .grp { display: flex; align-items: center; gap: 8px; }
+.tool-kinetic .grp .lab { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.tool-kinetic input[type=range] { width: 120px; accent-color: var(--accent); }
+.tool-kinetic .topchk { display: flex; align-items: center; gap: 7px; font-size: 13px; cursor: pointer; }
+.tool-kinetic .spacer { flex: 1; }
+.tool-kinetic .total { font-size: 13px; color: var(--ink); font-weight: 700; }
+.tool-kinetic .btn { border: 0; background: var(--accent); color: #fff; font-family: var(--sans); font-size: 14px; font-weight: 700; padding: 10px 20px; border-radius: 10px; cursor: pointer; transition: .15s; }
+.tool-kinetic .btn.dark { background: var(--ink); }
+.tool-kinetic .btn:hover { filter: brightness(.95); }
+.tool-kinetic .btn:disabled { opacity: .45; cursor: default; }
+.tool-kinetic .hint { font-size: 12.5px; color: var(--muted); margin: 12px 0 0; line-height: 1.75; }
+.tool-kinetic .dot { width: 9px; height: 9px; border-radius: 50%; background: #c0392b; display: none; margin-right: 6px; }
+.tool-kinetic.recording .dot { display: inline-block; animation: bl 1s infinite; }
+.tool-kinetic .stage { width: 100%; display: flex; justify-content: center; }
+.tool-kinetic canvas { width: min(96vw, 1060px); height: auto; display: block; border-radius: 12px; box-shadow: 0 18px 50px -18px rgba(0,0,0,.4); background: #000; }
+@media (max-width: 760px) { .tool-kinetic .card { grid-template-columns: 34px 1fr; } .tool-kinetic .card .mini, .tool-kinetic .card .tc, .tool-kinetic .card .ops { grid-column: 2; } }

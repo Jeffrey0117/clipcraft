@@ -1,0 +1,18 @@
+.tool-cover { --accent: #C01814; --cover-bg: #E9E9E6; --cover-red: #C01814; --cover-ink: #1C1C19; width: 100%; display: flex; justify-content: center; }
+.tool-cover .wrap { width: 100%; max-width: 1000px; display: flex; flex-direction: column; gap: 22px; align-items: center; }
+.tool-cover .panel { width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+.tool-cover .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .tool-cover .fields { grid-template-columns: 1fr; } }
+.tool-cover .field label { display: block; font-size: 13px; color: var(--muted); margin: 0 0 7px; letter-spacing: .04em; text-align: center; }
+.tool-cover .field input { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px; font-size: 16px; font-family: var(--sans); color: var(--ink); text-align: center; background: #FCFBFA; outline: none; transition: border-color .15s, box-shadow .15s; }
+.tool-cover .field input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(192,24,20,.12); }
+.tool-cover .toolbar { display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+.tool-cover .btn { border: 0; background: var(--accent); color: #fff; font-family: var(--sans); font-size: 14px; font-weight: 700; padding: 10px 22px; border-radius: 10px; cursor: pointer; transition: filter .15s, transform .05s; }
+.tool-cover .btn:hover { filter: brightness(.94); }
+.tool-cover .btn:active { transform: translateY(1px); }
+.tool-cover .hint { font-size: 12.5px; color: var(--muted); text-align: center; margin: 10px 0 0; }
+.tool-cover .stage { width: 100%; display: flex; justify-content: center; }
+.tool-cover .cover { width: min(96vw, 1000px); aspect-ratio: 16/9; container-type: inline-size; position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 18px 50px -18px rgba(0,0,0,.30); background: radial-gradient(130% 130% at 50% 38%, #ECEBE8 0%, var(--cover-bg) 60%, #E2E1DC 100%); }
+.tool-cover .group { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 6%; }
+.tool-cover .title { font-family: var(--sans); font-weight: 900; color: var(--cover-red); font-size: 10cqw; line-height: 1; letter-spacing: -.015em; margin: 0; white-space: nowrap; }
+.tool-cover .subtitle { font-family: var(--sans); font-weight: 700; color: var(--cover-ink); font-size: 2.7cqw; letter-spacing: .02em; margin: 2.4cqw 0 0; white-space: nowrap; }

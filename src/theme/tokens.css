@@ -1,0 +1,18 @@
+/* ── ClipCraft 設計語彙(沿用五個原始工具的共用色票)──────────── */
+:root {
+  --page: #F5F4F2;
+  --panel: #FFFFFF;
+  --panel-2: #FCFBFA;
+  --line: #E7E5E1;
+  --ink: #1C1B19;
+  --muted: #8A887F;
+  --accent: #C01814;
+  --accent-soft: rgba(192, 24, 20, 0.12);
+
+  --sidebar-w: 248px;
+  --radius: 14px;
+
+  --sans: "Noto Sans TC", system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --serif: "Noto Serif TC", serif;
+  --shadow-card: 0 18px 50px -18px rgba(0, 0, 0, 0.30);
+}

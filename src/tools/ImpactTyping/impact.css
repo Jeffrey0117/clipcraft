@@ -1,0 +1,28 @@
+.tool-impact { --accent: #C01812; width: 100%; display: flex; justify-content: center; }
+.tool-impact .wrap { width: 100%; max-width: 1040px; display: flex; flex-direction: column; gap: 16px; align-items: center; }
+.tool-impact .panel { width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.tool-impact .tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 11px; overflow: hidden; margin-bottom: 4px; }
+.tool-impact .tabs button { border: 0; background: #FCFBFA; color: var(--muted); font-family: var(--sans); font-size: 14px; font-weight: 700; padding: 11px 22px; cursor: pointer; border-right: 1px solid var(--line); }
+.tool-impact .tabs button:last-child { border-right: 0; }
+.tool-impact .tabs button.on { background: var(--ink); color: #fff; }
+.tool-impact .field label { display: block; font-size: 13px; color: var(--muted); margin: 14px 0 7px; letter-spacing: .04em; }
+.tool-impact .field input[type=text], .tool-impact .field textarea { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px; font-size: 16px; font-family: var(--sans); font-weight: 700; color: var(--ink); background: #FCFBFA; outline: none; }
+.tool-impact .field textarea { min-height: 64px; line-height: 1.5; resize: vertical; }
+.tool-impact .field input:focus, .tool-impact .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(192,24,18,.12); }
+.tool-impact .row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+.tool-impact .grp { display: flex; align-items: center; gap: 8px; }
+.tool-impact .grp .lab { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.tool-impact input[type=range] { width: 130px; accent-color: var(--accent); }
+.tool-impact input[type=number] { width: 66px; border: 1px solid var(--line); border-radius: 8px; padding: 7px 9px; font-size: 14px; font-family: var(--sans); }
+.tool-impact select { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 14px; font-family: var(--sans); background: #FCFBFA; }
+.tool-impact .spacer { flex: 1; }
+.tool-impact .btn { border: 0; background: var(--accent); color: #fff; font-family: var(--sans); font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 10px; cursor: pointer; transition: .15s; }
+.tool-impact .btn.dark { background: var(--ink); }
+.tool-impact .btn:hover { filter: brightness(.95); }
+.tool-impact .btn:disabled { opacity: .45; cursor: default; }
+.tool-impact .hint { font-size: 12.5px; color: var(--muted); margin: 12px 0 0; line-height: 1.7; }
+.tool-impact .dot { width: 9px; height: 9px; border-radius: 50%; background: #fff; display: none; margin-right: 6px; }
+.tool-impact.recording .dot { display: inline-block; animation: bl 1s infinite; }
+.tool-impact .stage { width: 100%; display: flex; justify-content: center; }
+.tool-impact canvas { width: min(96vw, 1040px); height: auto; display: block; border-radius: 12px; box-shadow: 0 18px 50px -18px rgba(0,0,0,.3); }
+.tool-impact .hide { display: none; }
