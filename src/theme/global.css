@@ -111,10 +111,13 @@ body.home-dark { background: #07060a; }
   padding: 20px 14px; display: flex; flex-direction: column; gap: 4px;
   position: sticky; top: 0; height: 100vh; overflow-y: auto;
 }
-.side-brand { display: flex; align-items: center; gap: 10px; padding: 6px 8px 18px; }
+.side-top { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px 14px; }
+.side-brand { display: flex; align-items: center; gap: 10px; }
 .side-brand .mark { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; font-size: 16px; }
 .side-brand .name { font-weight: 900; font-size: 16px; letter-spacing: .01em; color: #F2EFEA; }
 .side-brand .name small { display: block; font-size: 10.5px; font-weight: 500; color: #8E867F; letter-spacing: .08em; }
+.side-burger { display: none; }
+.side-nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
 .nav-block { margin-top: 8px; }
 .nav-group { font-size: 11px; color: #6E665F; letter-spacing: .12em; margin: 12px 8px 4px; text-transform: uppercase; }
 .nav-item { display: flex; align-items: center; gap: 11px; padding: 10px 11px; border-radius: 10px; font-size: 14px; font-weight: 700; color: #C9C3BD; transition: background-color .12s, color .12s; }
@@ -123,19 +126,30 @@ body.home-dark { background: #07060a; }
 .nav-item:hover .ico { color: #C9C3BD; }
 .nav-item.active { background: rgba(192, 24, 20, .2); color: #fff; }
 .nav-item.active .ico { color: #fff; }
+.side-ghstar { margin-top: auto; justify-content: center; }
 
+/* 手機:上方一條 bar + 漢堡,點開才下拉(不再橫向滑) */
 @media (max-width: 860px) {
   .app-workspace { flex-direction: column; }
   .sidebar {
-    position: static; width: 100%; flex: none; height: auto;
+    position: sticky; top: 0; z-index: 40; width: 100%; flex: none; height: auto;
     border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .08);
-    flex-direction: row; align-items: center; gap: 6px; overflow-x: auto; padding: 10px 12px;
+    padding: 0; gap: 0; overflow: visible;
   }
-  .side-brand { padding: 6px 8px; flex: none; }
-  .side-brand .name small { display: none; }
-  .nav-block { margin-top: 0; display: flex; align-items: center; gap: 4px; }
-  .nav-group { display: none; }
-  .nav-item { white-space: nowrap; padding: 8px 10px; }
+  .side-top { padding: 10px 14px; }
+  .side-burger {
+    display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+    border: 1px solid rgba(255, 255, 255, .15); background: rgba(255, 255, 255, .05); border-radius: 9px;
+    color: #F2EFEA; cursor: pointer;
+  }
+  .side-nav {
+    position: absolute; top: 100%; left: 0; right: 0; display: none; flex: none;
+    background: #0b0a0e; border-bottom: 1px solid rgba(255, 255, 255, .08);
+    padding: 8px 12px 14px; max-height: 72vh; overflow-y: auto;
+    box-shadow: 0 26px 44px -22px rgba(0, 0, 0, .85);
+  }
+  .sidebar.open .side-nav { display: flex; }
+  .side-ghstar { margin-top: 8px; align-self: flex-start; }
 }
 
 /* 首頁樣式在 pages/home.css(由 Home.tsx 載入) */
