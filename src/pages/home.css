@@ -8,7 +8,7 @@
 .reveal.in { opacity: 1; transform: none; }
 
 /* ── 捲動舞台:外層留 2.4 屏的捲動距離,內層釘住 ──────────── */
-.scene { position: relative; height: 240vh; }
+.scene { position: relative; height: 240vh; height: 240svh; }
 .scene-pin {
   position: sticky; top: 0; height: 100vh; height: 100svh;
   overflow: hidden; background: #07060a;
@@ -125,3 +125,15 @@
 .home-foot { margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.1); color: #6E665F; font-size: 12.5px; line-height: 1.9; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .home-foot .foot-text { margin: 0; }
 .home-foot b { color: #F2EFEA; font-weight: 800; letter-spacing: .02em; }
+
+/* ── 手機版 ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .scene-headline { width: min(90vw, 900px); }
+  .scroll-ind { bottom: 22px; }
+  .story-intro { padding: 76px 22px; }
+  .story-intro h2 { font-size: clamp(28px, 8vw, 40px); }
+  .home-body { padding: 28px 22px 72px; }
+  .tcard { padding: 20px 18px 18px; gap: 14px; }
+  .tcard-ico { width: 46px; height: 46px; }
+  .features { margin-top: 40px; }
+}

@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 const REPO_URL = 'https://github.com/Jeffrey0117/clipcraft'
 
 function GithubMark({ size = 17 }: { size?: number }) {
@@ -11,22 +9,10 @@ function GithubMark({ size = 17 }: { size?: number }) {
 }
 
 export default function GitHubStar({ className = 'gh-star' }: { className?: string }) {
-  const [stars, setStars] = useState<number | null>(null)
-
-  useEffect(() => {
-    let ok = true
-    fetch('https://api.github.com/repos/Jeffrey0117/clipcraft')
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => { if (ok && d && typeof d.stargazers_count === 'number') setStars(d.stargazers_count) })
-      .catch(() => {})
-    return () => { ok = false }
-  }, [])
-
   return (
     <a className={className} href={REPO_URL} target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 上給顆星">
       <GithubMark />
       <span className="gh-label">Star</span>
-      {stars !== null && <span className="star-count">{stars}</span>}
     </a>
   )
 }
