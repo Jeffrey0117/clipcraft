@@ -17,6 +17,10 @@
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
   transform-origin: center; will-change: transform;
 }
+/* 直式/窄螢幕(手機):影片完整顯示,不裁切到看不見字(上下留黑邊) */
+@media (max-aspect-ratio: 4 / 3) {
+  .scene-video { object-fit: contain; }
+}
 /* 影片溶進底色:這層的不透明度由捲動驅動,讓影片淡入同一個深色背景 */
 .scene-veil { position: absolute; inset: 0; background: #07060a; opacity: 0; will-change: opacity; }
 
